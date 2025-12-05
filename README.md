@@ -3,8 +3,9 @@
 ### Projeto Desenvolvido com Aplicação CRUD
 Este projeto consiste em um Sistema de Gerenciamento de Campeonato desenvolvido em PHP com MySQL, implementando operações CRUD (Create, Read, Update, Delete) para gerenciamento de:
 
-Funcionários: Cadastro, listagem, edição e exclusão de jogadores
-Vendas: Cadastro, listagem, edição e exclusão de equipes 
+Jogadores: Cadastro, listagem, edição e exclusão de jogadores
+
+Equipes: Cadastro, listagem, edição e exclusão de equipes 
 
 ### Estrutura CRUD Implementada
 Para cada módulo, foram implementadas as quatro operações básicas:
