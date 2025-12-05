@@ -1,17 +1,20 @@
-Este repositório é constituído de atividades da disciplina Técnicas de Programação do curso Bacharelado em Engenharia de Software do aluno Willdon Oliveira da Silva.
+# Este repositório é constituído de atividades da disciplina Técnicas de Programação do curso Bacharelado em Engenharia de Software do aluno Willdon Oliveira da Silva.
 
-Projeto Desenvolvido com Aplicação CRUD
+### Projeto Desenvolvido com Aplicação CRUD
 Este projeto consiste em um Sistema de Gerenciamento de Campeonato desenvolvido em PHP com MySQL, implementando operações CRUD (Create, Read, Update, Delete) para gerenciamento de:
 
 Funcionários: Cadastro, listagem, edição e exclusão de jogadores
 Vendas: Cadastro, listagem, edição e exclusão de equipes 
-Estrutura CRUD Implementada
+
+### Estrutura CRUD Implementada
 Para cada módulo, foram implementadas as quatro operações básicas:
 
 CREATE (Criar): Formulários de cadastro que inserem novos registros no banco de dados
 READ (Ler): Páginas de listagem que exibem todos os registros cadastrados
 UPDATE (Atualizar): Formulários de edição que modificam registros existentes
 DELETE (Deletar): Funcionalidade que remove registros do banco de dados
+
+## Pseudocódigo
 
     INÍCIO
     CONECTAR ao banco de dados MySQL (via config.php)
@@ -35,10 +38,10 @@ DELETE (Deletar): Funcionalidade que remove registros do banco de dados
         CASO PADRÃO: EXIBIR mensagem de boas-vindas
     FIM SWITCH
     FIM
-Módulo 1: Jogador (CRUD Simples)
+## Módulo 1: Jogador (CRUD Simples)
 Módulo dedicado ao gerenciamento dos dados dos jogadores.
 
-Pseudocódigo - Operação de Cadastro de Jogadores (salvar-jogador.php)
+## Pseudocódigo - Operação de Cadastro de Jogadores (salvar-jogador.php)
 
 
     INÍCIO
@@ -60,7 +63,7 @@ Pseudocódigo - Operação de Cadastro de Jogadores (salvar-jogador.php)
         FIM SE 
     FIM SE 
     FIM
-Pseudocódigo - Operação de Listagem de Jogadores (listar-jogador.php)
+## Pseudocódigo - Operação de Listagem de Jogadores (listar-jogador.php)
 
 
     INÍCIO
@@ -81,7 +84,7 @@ Pseudocódigo - Operação de Listagem de Jogadores (listar-jogador.php)
         EXIBIR mensagem: "Não encontrou resultado" 
     FIM SE 
     FIM
-Pseudocódigo - Operação de Edição de Jogador (editar-jogador.php & salvar-jogador.php)
+## Pseudocódigo - Operação de Edição de Jogador (editar-jogador.php & salvar-jogador.php)
 
 
     INÍCIO
@@ -110,7 +113,7 @@ Pseudocódigo - Operação de Edição de Jogador (editar-jogador.php & salvar-j
         FIM SE 
     FIM SE 
     FIM
-Pseudocódigo - Operação de Exclusão de Jogador (salvar-jogador.php)
+## Pseudocódigo - Operação de Exclusão de Jogador (salvar-jogador.php)
 
 
     INÍCIO
@@ -128,10 +131,10 @@ Pseudocódigo - Operação de Exclusão de Jogador (salvar-jogador.php)
         REDIRECIONAR para página de listagem de jogadores 
     FIM SE 
     FIM
-Módulo 2: Equipe (CRUD com Vínculo)
+## Módulo 2: Equipe (CRUD com Vínculo)
 Módulo para gerenciar equipes, que possuem uma chave estrangeira (jogador_id_jogador) referenciando a tabela jogador.
 
-    Algoritmo 1: Cadastrar Equipe (salvar-equipe.php)
+## Algoritmo 1: Cadastrar Equipe (salvar-equipe.php)
 
 
     ALGORITMO cadastrar_equipe 
@@ -157,7 +160,7 @@ Módulo para gerenciar equipes, que possuem uma chave estrangeira (jogador_id_jo
         REDIRECIONAR para '?page=listar-equipe' 
     FIM SE 
     FIM
-Algoritmo 2: Listar Equipes (Com JOIN) (listar-equipe.php)
+## Algoritmo 2: Listar Equipes (Com JOIN) (listar-equipe.php)
 
     É utilizada uma operação INNER JOIN para exibir o nome completo do jogador vinculado.
 
@@ -188,7 +191,7 @@ Algoritmo 2: Listar Equipes (Com JOIN) (listar-equipe.php)
         ESCREVA "Não encontrou resultado." 
     FIM SE 
     FIM
-Pseudocódigo - Operação de Edição de Equipe (salvar-equipe.php - caso 'editar')
+## Pseudocódigo - Operação de Edição de Equipe (salvar-equipe.php - caso 'editar')
 
 
     INÍCIO 
@@ -208,7 +211,7 @@ Pseudocódigo - Operação de Edição de Equipe (salvar-equipe.php - caso 'edit
         FIM SE 
     FIM SE 
     FIM
-Pseudocódigo - Operação de Exclusão de Equipe (salvar-equipe.php - caso 'excluir')
+## Pseudocódigo - Operação de Exclusão de Equipe (salvar-equipe.php - caso 'excluir')
 
 
     INÍCIO
@@ -227,7 +230,7 @@ Pseudocódigo - Operação de Exclusão de Equipe (salvar-equipe.php - caso 'exc
     FIM SE 
     FIM
 
-Fluxograma - Operação CRUD Completa de Funcionário
+## Fluxograma - Operação CRUD Completa de Funcionário
 
                     ┌─────────────┐
                     │   INÍCIO    │
@@ -319,7 +322,7 @@ Fluxograma - Operação CRUD Completa de Funcionário
       ┌──────────┐
       │  FIM     │
       └──────────┘
-Fluxograma - Fluxo de Navegação do Sistema
+## Fluxograma - Fluxo de Navegação do Sistema
 
                     ┌─────────────┐
                     │  index.php  │
@@ -359,11 +362,11 @@ Fluxograma - Fluxo de Navegação do Sistema
                     └─────────────┘
                            
 
-Modelo do Banco de Dados (SQL)
+## Modelo do Banco de Dados (SQL)
 
-Tabela: jogador
+## Tabela: jogador
 
-SQL
+### SQL
 
     `id_jogador` INT NOT NULL AUTO_INCREMENT,
 
@@ -392,11 +395,11 @@ SQL
     PRIMARY KEY (`id_jogador`))
     ENGINE = InnoDB;
 
-Tabela: equipe
+## Tabela: equipe
 
-Esta tabela possui a chave estrangeira jogador_id_jogador que aponta para jogador.id_jogador.
+## Esta tabela possui a chave estrangeira jogador_id_jogador que aponta para jogador.id_jogador.
 
-SQL
+## SQL
 
 
     `id_equipe` INT NOT NULL AUTO_INCREMENT,
@@ -436,7 +439,7 @@ SQL
     ON UPDATE NO ACTION)
     
     ENGINE = InnoDB;
-Observações Técnicas
+## Observações Técnicas
 
 Conexão com Banco de Dados: Utiliza MySQLi para a conexão orientada a objetos (via $conn em config.php).
 
