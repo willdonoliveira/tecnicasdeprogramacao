@@ -32,14 +32,14 @@ DELETE (Deletar): Funcionalidade que remove registros do banco de dados
 
         CASO PADRÃO: EXIBIR mensagem de boas-vindas
     FIM SWITCH
-FIM
+    FIM
 Módulo 1: Jogador (CRUD Simples)
 Módulo dedicado ao gerenciamento dos dados dos jogadores.
 
 Pseudocódigo - Operação de Cadastro de Jogadores (salvar-jogador.php)
 
 
-INÍCIO
+    INÍCIO
     CONECTAR ao banco de dados MySQL 
     RECEBER ação do formulário 
     
@@ -57,11 +57,11 @@ INÍCIO
             REDIRECIONAR para página de listagem de jogadores 
         FIM SE 
     FIM SE 
-FIM
+    FIM
 Pseudocódigo - Operação de Listagem de Jogadores (listar-jogador.php)
 
 
-INÍCIO
+    INÍCIO
     CONECTAR ao banco de dados MySQL 
     CRIAR comando SQL: SELECT * FROM jogador 
     EXECUTAR consulta SQL 
@@ -78,11 +78,11 @@ INÍCIO
     SENÃO 
         EXIBIR mensagem: "Não encontrou resultado" 
     FIM SE 
-FIM
+    FIM
 Pseudocódigo - Operação de Edição de Jogador (editar-jogador.php & salvar-jogador.php)
 
 
-INÍCIO
+    INÍCIO
     CONECTAR ao banco de dados MySQL 
     RECEBER id_jogador da URL (para buscar dados) 
     
@@ -107,11 +107,11 @@ INÍCIO
             REDIRECIONAR para página de listagem de jogadores 
         FIM SE 
     FIM SE 
-FIM
+    FIM
 Pseudocódigo - Operação de Exclusão de Jogador (salvar-jogador.php)
 
 
-INÍCIO
+    INÍCIO
     CONECTAR ao banco de dados MySQL 
     RECEBER ação = "excluir" e id_jogador da URL 
     
@@ -125,19 +125,19 @@ INÍCIO
         EXIBIR mensagem: "Não foi possível excluir!" 
         REDIRECIONAR para página de listagem de jogadores 
     FIM SE 
-FIM
+    FIM
 Módulo 2: Equipe (CRUD com Vínculo)
 Módulo para gerenciar equipes, que possuem uma chave estrangeira (jogador_id_jogador) referenciando a tabela jogador.
 
-Algoritmo 1: Cadastrar Equipe (salvar-equipe.php)
+    Algoritmo 1: Cadastrar Equipe (salvar-equipe.php)
 
 
-ALGORITMO cadastrar_equipe 
-VAR 
+    ALGORITMO cadastrar_equipe 
+    VAR 
     nome_equipe, estado_equipe, cidade_equipe, ginasio_equipe, sql: TEXTO 
     jogador_id_jogador: INTEIRO 
     res: BOOLEANO 
-INÍCIO 
+     INÍCIO 
     // Receber dados do formulário 
     nome_equipe <- $_POST['nome_equipe'] 
     [...] 
@@ -154,18 +154,17 @@ INÍCIO
         ESCREVA "Não foi possível cadastrar a equipe!" 
         REDIRECIONAR para '?page=listar-equipe' 
     FIM SE 
-FIM
+    FIM
 Algoritmo 2: Listar Equipes (Com JOIN) (listar-equipe.php)
-É utilizada uma operação INNER JOIN para exibir o nome completo do jogador vinculado.
 
+    É utilizada uma operação INNER JOIN para exibir o nome completo do jogador vinculado.
 
-
-ALGORITMO listar_equipes 
-VAR 
+    ALGORITMO listar_equipes 
+    VAR 
     sql: TEXTO 
     res: RESULTADO 
     qtd: INTEIRO 
-INÍCIO 
+    INÍCIO 
     // SQL com JOIN para buscar o nome do jogador vinculado 
     sql <- "SELECT eq.*, jg.nome_jogador 
             FROM equipe AS eq 
@@ -186,11 +185,11 @@ INÍCIO
     SENÃO 
         ESCREVA "Não encontrou resultado." 
     FIM SE 
-FIM
+    FIM
 Pseudocódigo - Operação de Edição de Equipe (salvar-equipe.php - caso 'editar')
 
 
-INÍCIO 
+    INÍCIO 
     CONECTAR ao banco de dados MySQL 
     RECEBER id_equipe e dados atualizados do formulário (incluindo NOVO jogador_id_jogador) 
     
@@ -206,11 +205,11 @@ INÍCIO
             REDIRECIONAR para página de listagem de equipes 
         FIM SE 
     FIM SE 
-FIM
+    FIM
 Pseudocódigo - Operação de Exclusão de Equipe (salvar-equipe.php - caso 'excluir')
 
 
-INÍCIO
+    INÍCIO
     CONECTAR ao banco de dados MySQL 
     RECEBER ação = "excluir" e id_equipe da URL 
     
@@ -224,7 +223,7 @@ INÍCIO
         EXIBIR mensagem: "Não foi possível excluir equipe! (Verificar restrições de Chave Estrangeira)" 
         REDIRECIONAR para página de listagem de equipes 
     FIM SE 
-FIM
+    FIM
 
 Fluxograma - Operação CRUD Completa de Funcionário
 
