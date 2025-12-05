@@ -1,6 +1,6 @@
 # Este repositório é constituído de atividades da disciplina Técnicas de Programação do curso Bacharelado em Engenharia de Software do aluno Willdon Oliveira da Silva.
 
-### Projeto Desenvolvido com Aplicação CRUD
+## Projeto Desenvolvido com Aplicação CRUD. Encontra-se dentro da pasta "projeto_final" o trabalho desenvolvido.
 Este projeto consiste em um Sistema de Gerenciamento de Campeonato desenvolvido em PHP com MySQL, implementando operações CRUD (Create, Read, Update, Delete) para gerenciamento de:
 
 Jogadores: Cadastro, listagem, edição e exclusão de jogadores
