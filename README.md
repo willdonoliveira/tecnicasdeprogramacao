@@ -1,6 +1,6 @@
  Pseudocódigo - Roteamento Principal (index.php)
 
-```
+
 INÍCIO
     CONECTAR ao banco de dados MySQL
     RECEBER parâmetro 'page' da URL
